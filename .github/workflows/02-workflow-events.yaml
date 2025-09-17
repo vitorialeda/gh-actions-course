@@ -1,5 +1,8 @@
 name: 02 - Workflow Events
-on: push
+on: 
+    push:
+    schedule:
+        - cron: '* * * * *'
 
 jobs:
     echo:
@@ -7,4 +10,4 @@ jobs:
         steps:
             - name: Show the trigger
               run: | 
-                echo "Event name: ${{ github.event_name }}"
+                echo "Event name: ${{ github.event_name }}."
