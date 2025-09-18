@@ -1,2 +1,1 @@
 # gh-actions-course
-..
