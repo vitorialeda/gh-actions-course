@@ -30,7 +30,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     environment: ${{inputs.target}}
-    require: build
+    needs: build
     if: ${{!inputs.dry-run}}
     steps:
       - name: Deploy
